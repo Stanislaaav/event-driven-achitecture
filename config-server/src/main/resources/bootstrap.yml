@@ -13,5 +13,5 @@ spring:
     fail-fast: true
   security:
     user:
-      name: spring_cloud_user
-      password: springCloud_Pwd!
+      name: ${cloud_user:username}
+      password: ${cloud_passwodrd:password}
