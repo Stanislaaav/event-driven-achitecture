@@ -6,12 +6,17 @@ spring:
       server:
         git:
           uri: https://github.com/Stanislaaav/spring-cloud-config-server-repository
-          username: ${username:username}
-          password: ${password:password}
-          clone-on-start: true
           default-label: main
+          username: Stanislaaav
+          password: ${GIT_PASS}
+#          password: ${GIT_PASS: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}
+          clone-on-start: true
     fail-fast: true
   security:
     user:
-      name: ${cloud_user:username}
-      password: ${cloud_passwodrd:password}
+      name: spring_cloud_user
+      password: '{cipher}c0d85293cb01a46b3b629a12e5620f4e9d00d4ede8bdf248cf5b83e23f4536501e4b34a8d56b7a34fcee17aa01d05330'
+
+
+# password=springCloud_Pwd!
+# keyEncryption=Demo_Pwd!2020
