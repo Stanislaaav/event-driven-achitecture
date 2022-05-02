@@ -8,8 +8,8 @@ spring:
           uri: https://github.com/Stanislaaav/spring-cloud-config-server-repository
           default-label: main
           username: Stanislaaav
+#          must be tocken from github
           password: ${GIT_PASS}
-#          password: ${GIT_PASS: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}
           clone-on-start: true
     fail-fast: true
   security:
