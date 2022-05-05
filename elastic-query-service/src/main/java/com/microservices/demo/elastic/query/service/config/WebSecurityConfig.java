@@ -23,20 +23,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
-                .httpBasic()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/**").hasRole("USER")
-                .and()
-                .csrf().disable();
+            .httpBasic()
+            .and()
+            .authorizeRequests()
+            .antMatchers("/**").hasRole("USER")
+            .and()
+            .csrf().disable();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser(userConfigData.getUsername())
-                .password(passwordEncoder().encode(userConfigData.getPassword()))
-                .roles(userConfigData.getRoles());
+            .withUser(userConfigData.getUsername())
+            .password(passwordEncoder().encode(userConfigData.getPassword()))
+            .roles(userConfigData.getRoles());
     }
 
     @Bean
@@ -46,3 +46,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 }
+
