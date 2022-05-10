@@ -12,7 +12,10 @@
   <artifactId>elastic-query-web-client</artifactId>
 
   <dependencies>
-
+    <dependency>
+      <groupId>com.microservices.demo</groupId>
+      <artifactId>elastic-query-web-client-common</artifactId>
+    </dependency>
     <dependency>
       <groupId>com.microservices.demo</groupId>
       <artifactId>app-config-data</artifactId>
